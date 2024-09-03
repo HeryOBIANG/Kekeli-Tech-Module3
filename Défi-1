@@ -1,0 +1,7 @@
+Random piece = new Random();
+string lancer = piece.Next(0, 2) > 0 ? "Heads" : "Tails";
+Console.WriteLine($"\n{lancer}\n");
+
+
+//Liens énoncé: https://learn.microsoft.com/fr-fr/training/modules/csharp-evaluate-boolean-expressions/4-challenge-1
+// Pile ou face
