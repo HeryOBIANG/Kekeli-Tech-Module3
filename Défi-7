@@ -1,0 +1,28 @@
+string ? readResult;
+bool validEntry = false;
+int numericValue = 0;
+ 
+Console.WriteLine("Enter an integer value between 5 and 10:");
+
+do
+{
+    readResult = Console.ReadLine();
+    if (readResult != null)
+    {
+        int.TryParse(readResult, out numericValue);
+        if (numericValue >= 5 && numericValue <= 10)
+        {
+            validEntry = true;
+        }
+        else
+        {
+            Console.WriteLine("Your input is invalid, please try again.");
+        }
+    }
+} while (validEntry == false);
+
+Console.WriteLine($"Your input value ({readResult}) has been accepted");
+
+
+//Liens énoncé: https://learn.microsoft.com/fr-fr/training/modules/csharp-do-while/5-exercise-challenge-differentiate-while-do-statements
+//Demmande d'enter un chiffre entre 5 et 10
