@@ -1,0 +1,25 @@
+string[] myStrings = ["I like pizza. I like roast chicken. I like salad", "I like all three of the menu choices"];
+int periodLocation = 0;
+string result = "";
+
+for (int i = 0; i < myStrings.Length; i++)
+{
+    result = myStrings[i];
+
+    do
+    {
+        periodLocation = myStrings[i].IndexOf('.');
+        if (periodLocation == -1)
+        {
+            Console.WriteLine(myStrings[i].TrimStart());
+            continue;
+        }
+        result = myStrings[i].Remove(periodLocation);
+        Console.WriteLine(result.TrimStart());
+        myStrings[i] = myStrings[i].Substring(periodLocation + 1);
+    } while (periodLocation != -1);
+}
+
+
+//Liens énoncé: https://learn.microsoft.com/fr-fr/training/modules/csharp-do-while/5-exercise-challenge-differentiate-while-do-statements
+//Projet 3
