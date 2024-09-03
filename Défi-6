@@ -1,0 +1,31 @@
+Random strike = new Random();
+int cout = strike.Next(1, 11);
+int heroLife = 10;
+int monsterLife = 10;
+
+do
+{
+    cout = strike.Next(1, 11);
+    monsterLife -= cout;
+    Console.WriteLine(monsterLife > 0 ? $"Monster was damaged and lost {cout} health and now has {monsterLife} health." : $"Monster was damaged and lost {cout} health and now has 0 health.");
+
+    if (monsterLife <= 0)
+    {
+        Console.WriteLine("Hero Wins !");
+        break;
+    }
+
+    cout = strike.Next(1, 11);
+    heroLife -= cout;
+    Console.WriteLine(heroLife > 0 ? $"Hero was damaged and lost {cout} health and now has {heroLife} health." : $"Hero was damaged and lost {cout} health and now has 0 health.");
+
+    if (heroLife <= 0) 
+    {
+        Console.WriteLine("Monster Wins !");
+        break;
+    }
+} while (monsterLife > 0 || heroLife > 0);
+
+
+//Liens énoncé: https://learn.microsoft.com/fr-fr/training/modules/csharp-do-while/3-challenge
+//Jeux d'attaque monstre vs hero avec 10 points de vie chacun 
