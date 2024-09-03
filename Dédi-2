@@ -1,5 +1,6 @@
 string permission = "Admin|Manager";
 int level = 55;
+
 if (permission.Contains("Admin"))
 {
     Console.WriteLine((level > 55) ? "Welcome, Super Admin user.\n" : "Welcome, Admin user.\n");
@@ -12,8 +13,10 @@ else
 {
     Console.WriteLine("You do not have sufficient privileges.\n");
 }
+
 permission = "Respo|Manager";
 level = 25;
+
 if (permission.Contains("Admin"))
 {
     Console.WriteLine((level > 55) ? "Welcome, Super Admin user.\n" : "Welcome, Admin user.\n");
