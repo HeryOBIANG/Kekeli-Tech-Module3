@@ -1,0 +1,31 @@
+string permission = "Admin|Manager";
+int level = 55;
+if (permission.Contains("Admin"))
+{
+    Console.WriteLine((level > 55) ? "Welcome, Super Admin user.\n" : "Welcome, Admin user.\n");
+}
+else if (permission.Contains("Respo"))
+{
+    Console.WriteLine((level < 20) ? "You do not have sufficient privileges.\n" : "Contact an Admin for access.\n");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.\n");
+}
+permission = "Respo|Manager";
+level = 25;
+if (permission.Contains("Admin"))
+{
+    Console.WriteLine((level > 55) ? "Welcome, Super Admin user.\n" : "Welcome, Admin user.\n");
+}
+else if (permission.Contains("Respo"))
+{
+    Console.WriteLine((level < 20) ? "You do not have sufficient privileges.\n" : "Contact an Admin for access.\n");
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.\n");
+}
+
+
+//Liens énoncé: https://learn.microsoft.com/fr-fr/training/modules/csharp-evaluate-boolean-expressions/6-challenge-2
